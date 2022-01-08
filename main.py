@@ -1,13 +1,11 @@
 import requests
 import json
 from time import sleep
-from apscheduler.schedulers.blocking import BlockingScheduler
+
 
 from functions import readNames, send
 
 import constants as C
-
-sched = BlockingScheduler()
 
 
 auth = requests.auth.HTTPBasicAuth(C.CLIENT_ID, C.SECRET_KEY)
