@@ -24,3 +24,7 @@ def send(method, caption, data="", bot_token=C.bot_token):
                    'caption': caption + C.post_caption, 'video': data, }
     url = "https://api.telegram.org/bot" + str(bot_token) + "/" + str(method)
     r = requests.get(url, params=payload)
+    if (r.status_code) == 200:
+        print("a message has been sent.")
+    else:
+        print(f"message hasn't been sent, error: {r.text}")

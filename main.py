@@ -44,7 +44,6 @@ for post in posts:
                 send('sendPhoto', post['data']['title'],
                      post['data']['url_overridden_by_dest'])
         posted = posted + 1
-        print("a message has been sent.")
         sleep(C.interval)
 
 with open("./data/names list.json", "w") as text_file:
