@@ -44,6 +44,8 @@ for post in posts:
         posted = posted + 1
         sleep(C.interval)
 
+if (len(old_names) + len(unique_names) > 100):
+    del old_names[:C.limit]
 with open("./data/names list.json", "w") as text_file:
     json.dump(old_names + unique_names, text_file)
 
